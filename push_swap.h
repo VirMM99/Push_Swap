@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:07:41 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/16 16:51:27 by vimirand         ###   ########.fr       */
+/*   Updated: 2025/12/17 13:05:10 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 # include <unistd.h> //Write
 # include <string.h> //SIZE_T
 # include <limits.h> //INT_MIN
-# include <stdio.h> //No se entrega
-# include <ctype.h> //No se entrega
-# include <bsd/string.h> //No se entrega
+# include <stdio.h> 
+# include <ctype.h> 
+# include <bsd/string.h> 
 # include <aio.h> //SIZE_T tmb...
 
-				// Declaracion de funciones (Obligatorias)
+				// Declaracion de funciones base
 long	ft_atol(const char *nptr);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *s);
@@ -52,9 +52,22 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
 
-				// Declaracion de funciones (MIS LISTAS)
-void	swap_nodes(t_list **stack_x);
-void	push_nodes(t_list **dst, t_list **src);
-void	rotate_nodes(t_list **stack_x);
+				// Declaracion de funciones (MIS LISTAS MOVS)
+void	swap_this(t_list **stack_x);
+void	push_it(t_list **dst, t_list **src);
+void	rotate_it(t_list **stack_x);
+void	reverse_rotate_this(t_list **stack_x);
+				// Declaracion de funciones (MIS LISTAS TYPES OF MOVS)
+void	s_a(t_list **a);
+void	s_b(t_list **b);
+void	s_s(t_list **a, t_list **b);
+void	p_a(t_list **b, t_list **a);
+void	p_b(t_list **a, t_list **b);
+void	r_a(t_list **a);
+void	r_b(t_list **b);
+void	r_r(t_list **a, t_list **b);
+void	rr_a(t_list **a);
+void	rr_b(t_list **b);
+void	r_r(t_list **a, t_list **b);
 
 #endif

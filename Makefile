@@ -1,15 +1,23 @@
 NAME = push_swap.a
 
 SRCS = push_swap.c \
-	ft_atoi.c \ //CAMBIAR EL NOMBREEEE POR ATOL///
-	ft_split.c \
+	ft_atol.c \
+	ft_hex.c \
+	(LISTAS)
 	ft_printf.c \
-	ft_putstr.c \
 	ft_putchar.c \
 	ft_putnbr.c \
-	ft_hex.c \
-	ft_putptr.c
-
+	ft_putptr.c \
+	ft_putstr.c \
+	ft_split.c \
+	ft_strlen.c \
+	ft_substr.c \
+	moves_operations.c \
+	push_moves.c \
+	(push_swap.c) \
+	reverse_rotate_moves.c \
+	rotate_moves.c \
+	swap_moves.c
 
 
 CC = cc
