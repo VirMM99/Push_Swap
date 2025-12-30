@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_moves.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/17 12:49:07 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/17 12:56:17 by vimirand         ###   ########.fr       */
+/*   Created: 2025/09/30 15:57:40 by vimirand          #+#    #+#             */
+/*   Updated: 2025/12/30 17:23:53 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	p_a(t_list **b, t_list **a) //pusheamos el TOP node de B a el top de A
+int	ft_isdigit(int c)
 {
-	if (!b || !*b) // si no hay nada que podamos pushear de B salimos
-		return ;
-	push_it(a, b); // push_it(dest, src) dest es A y mandamos (src) desde B
-	write (1, "pa\n", 3);
-}
-void	p_b(t_list **a, t_list **b) //pusheamos el TOP node de A a el top de B
-{
-	if (!a || !*a)
-		return ;
-	push_it(b, a);
-	write (1, "pb\n", 3);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
 
+// int	main(void)
+// {
+// 	printf ("%d\n", ft_isdigit('1'));
+// 	printf ("%d", isdigit('1'));
+// 	return (0);
+// }

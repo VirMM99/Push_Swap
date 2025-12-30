@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 17:19:25 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/17 17:48:45 by vimirand         ###   ########.fr       */
+/*   Updated: 2025/12/30 17:33:51 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap.h"  //parse.c
 
 void	check_if_numbers(t_list **stack_x, char **num)
 {
@@ -20,12 +20,12 @@ void	check_if_numbers(t_list **stack_x, char **num)
 	i = 0;
 	if (num[i] == NULL) //si no hay numeros liberamos y mandamos mensaje de error
 	{
-		LIBERAR ARRAY(num); //Liberar array y hacer función para poder hacerlo
-		write(1, "Error\n", 6); //imprimimos el error
+		free_array(num); //Liberar array y hacer función para poder hacerlo
+		the_error("Error\n", 1, stack_x); //imprimimos el error
 	}
 	while (num[i] != NULL)
 	{
-		insert_node = creamos nodo(ft);
+		insert_node = //creamos nodo(ft);
 		ft_lstadd_back(stack_x, insert_node); //insertar nodo al final
 		i++;
 	}
@@ -43,9 +43,9 @@ void	check_duplicates(t_list **stack_x)
 		while (compare != NULL) //mientras que compare sea diferente de nulo...
 		{
 			if(current_stack->content == compare->content) //si el contenido del stack = al compare
-				write(1, "Error\n", 6); //Error por numeros duplicados
+				the_error("Error\n", 1, stack_x); //Error por numeros duplicados
 			compare = compare->next; // si no pues me igualas el compare al siguiente, para ir checkeando
 		}
-		current_stack = current_stack->next; //Y aquñi sigues igualando el stack al siguiente numero de la lista
+		current_stack = current_stack->next; //Y aquí sigues igualando el stack al siguiente numero de la lista
 	}
 }

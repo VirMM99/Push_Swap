@@ -12,7 +12,7 @@ SRCS = push_swap.c \
 	ft_split.c \
 	ft_strlen.c \
 	ft_substr.c \
-	moves_operations.c \
+	(Mis Funciones) 
 	push_moves.c \
 	(push_swap.c) \
 	reverse_rotate_moves.c \

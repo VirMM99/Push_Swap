@@ -6,14 +6,14 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:07:41 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/17 13:05:10 by vimirand         ###   ########.fr       */
+/*   Updated: 2025/12/30 17:24:21 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-				//Inclusiones necesarias
+				//Inclusiones
 # include <stdlib.h> //MALLOC
 # include <unistd.h> //Write
 # include <string.h> //SIZE_T
@@ -23,8 +23,10 @@
 # include <bsd/string.h> 
 # include <aio.h> //SIZE_T tmb...
 
-				// Declaracion de funciones base
+				// Declaración de funciones (BASE)
+int		ft_atoi(const char *nptr);
 long	ft_atol(const char *nptr);
+int		ft_isdigit(int c);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -37,27 +39,34 @@ int		ft_uputnbr(unsigned int n);
 int		ft_putptr(unsigned long n);
 int		ft_putstr(char *s);
 
-				// Declaracion de funciones (LISTAS)
 typedef struct s_list
 {
 	int			*content;
 	struct s_list	*next;
 }	t_list;
 
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstnew(void *content);
-int		ft_lstsize(t_list *lst);
+				// Declaración de funciones (MIS FUNCIONES)
+void	free_the_list(t_list **list);
+int		the_error(char *str, int return_value, t_list **stack);
+void	free_array(char **array);
+t_list	*ft_lstnew(int *content);
+void	ft_lstadd_back(t_list **stack_x, t_list *new_node);
 
-				// Declaracion de funciones (MIS LISTAS MOVS)
+				// Declaración de funciones (LISTAS)
+
+void	ft_lstadd_front(t_list **lst, t_list *new); //Creo No Hace falta
+void	ft_lstclear(t_list **lst, void (*del)(void*)); //Creo No Hace falta
+void	ft_lstdelone(t_list *lst, void (*del)(void*)); //Creo No Hace falta
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list *lst); //Creo No Hace falta
+
+				// Declaración de funciones (MIS LISTAS MOVS)
 void	swap_this(t_list **stack_x);
 void	push_it(t_list **dst, t_list **src);
 void	rotate_it(t_list **stack_x);
 void	reverse_rotate_this(t_list **stack_x);
-				// Declaracion de funciones (MIS LISTAS TYPES OF MOVS)
+
+				// Declaración de funciones (MIS LISTAS TYPES OF MOVS)
 void	s_a(t_list **a);
 void	s_b(t_list **b);
 void	s_s(t_list **a, t_list **b);
