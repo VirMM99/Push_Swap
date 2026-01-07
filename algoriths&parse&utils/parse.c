@@ -6,15 +6,15 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 17:19:25 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/30 17:33:51 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/05 16:52:49 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"  //parse.c
+#include "push_swap.h" //parse.c
 
 void	check_if_numbers(t_list **stack_x, char **num)
 {
-	int	i;
+	int		i;
 	t_list	*insert_node;
 	
 	i = 0;
@@ -25,7 +25,7 @@ void	check_if_numbers(t_list **stack_x, char **num)
 	}
 	while (num[i] != NULL)
 	{
-		insert_node = //creamos nodo(ft);
+		insert_node = ft_lstnew(ft_atoi(num[i]));//creamos nodo(ft_lstnew que espara eso);
 		ft_lstadd_back(stack_x, insert_node); //insertar nodo al final
 		i++;
 	}

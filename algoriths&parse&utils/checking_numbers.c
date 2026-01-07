@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:26:19 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/30 17:47:29 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/05 16:09:51 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ int	check_the_chars(char *num)
 	int	i;
 	
 	i = 1;
-	if (FT_SIGNO(num[0]) || ft_isdigit(num[0]))
+	if (ft_isdigit(num[0]))
 	{
-		if (FT_SIGNO(num[0]) && num[i] == '\0')
+		if (num[i] == '\0')
 			return (0);
 		while (ft_isdigit(num[i]) || num[i] == '\0')
 		{

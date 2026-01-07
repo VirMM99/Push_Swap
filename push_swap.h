@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:07:41 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/30 17:24:21 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/07 12:48:00 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,9 @@ int		ft_putstr(char *s);
 
 typedef struct s_list
 {
-	int			*content;
+	int			content;
+	int			position;
+	int			index;
 	struct s_list	*next;
 }	t_list;
 
@@ -51,6 +53,14 @@ int		the_error(char *str, int return_value, t_list **stack);
 void	free_array(char **array);
 t_list	*ft_lstnew(int *content);
 void	ft_lstadd_back(t_list **stack_x, t_list *new_node);
+int		count_argv(t_list *stack);
+void	re_index_num(t_list **list);
+int		is_this_order(t_list **stack_x);
+t_list	*is_this_small(t_list **stack_x);
+t_list	*is_this_big(t_list **stack_x);
+void	three_num(t_list **stack_x);
+void	four_num(t_list **stack_a, t_list **stack_b);
+void	five_num(t_list **stack_a, t_list **stack_b);
 
 				// Declaración de funciones (LISTAS)
 
