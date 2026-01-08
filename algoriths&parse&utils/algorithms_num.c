@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:26:15 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/07 16:45:02 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/08 17:37:02 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,3 +72,19 @@ void	five_num (t_list **stack_a, t_list **stack_b)
 			s_a(stack_a);
 }
 
+int	square_root(int number) //funcion para sacar el num que se necesita en el rango del algo dde k-sort
+{
+	int i;
+
+	if (number < 4)
+		return (1);
+	i = 2;
+	while (i * i < number)
+		i++;
+	if (i * i > number)
+	{
+		if ((i * i - number) < ((i - 1) * (i - 1) + (-number)))
+			return (i);
+	}
+	return (i - 1);
+}

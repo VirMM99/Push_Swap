@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:07:41 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/07 12:48:00 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/08 17:37:23 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,12 @@ t_list	*is_this_big(t_list **stack_x);
 void	three_num(t_list **stack_x);
 void	four_num(t_list **stack_a, t_list **stack_b);
 void	five_num(t_list **stack_a, t_list **stack_b);
+int		square_root(int number);
+void	move_it_to_b(t_list **stack_a, t_list **stack_b, int number);
+int		rotations_count(t_list *stack, int max_position);
+void	k_sort(t_list **stack_a, t_list **stack_b, int number);
+void	check_if_numbers(t_list **stack_x, char **num);
+void	check_duplicates(t_list **stack_x);
 
 				// Declaración de funciones (LISTAS)
 
