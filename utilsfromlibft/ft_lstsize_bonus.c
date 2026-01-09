@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 10:53:31 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/12 11:50:05 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:50:49 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_lstsize(t_list *lst)
 {

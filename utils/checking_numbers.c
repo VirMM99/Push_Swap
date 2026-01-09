@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:26:19 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/05 16:09:51 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:03:50 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h" //check_num_array.c
+#include "../push_swap.h" //check_num_array.c
 
 int	check_biggie_num(char *numbers)
 {
@@ -52,7 +52,7 @@ void	checking_lenght_range_ofnum(char **num, t_list **stack_x)
 			free_array(num);
 			the_error("Error\n", 1, stack_x); //Tiene la cadena vacía. Mirar funcion de free y la de error)
 		}
-		if (checking_atol(num[i]))
+		if (checking_atoil(num[i]))
 		{
 			free_array(num);
 			the_error("Error\n", 1, stack_x); //Num fuera de rango.Mirar funcion de free y la de error)

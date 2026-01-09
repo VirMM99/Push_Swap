@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:26:15 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 16:34:42 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:03:00 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	three_num(t_list **stack_x)
 {
@@ -37,7 +37,7 @@ void	four_num(t_list **stack_a, t_list **stack_b)
 	{
 		while (small != *stack_a)
 				r_a(stack_a);
-		if (small == stack_a)
+		if (small == *stack_a)
 		{
 			p_b(stack_a, stack_b);
 			if (!is_this_big(stack_a))

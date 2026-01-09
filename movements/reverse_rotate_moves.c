@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 13:01:14 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/30 17:43:58 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:51:31 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	reverse_rotate_this(t_list **stack_x)
 {

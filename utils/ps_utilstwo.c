@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 11:51:43 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/07 12:35:59 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:13:08 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	count_argv(t_list *stack)
 {
@@ -73,7 +73,7 @@ t_list	*is_this_small(t_list **stack_x)
 		return (NULL);
 	}
 	node = *stack_x;
-	small_node = stack_x;
+	small_node = *stack_x;
 	while (node != NULL)
 	{
 		if (node->position < small_node->position)
@@ -93,7 +93,7 @@ t_list	*is_this_big(t_list **stack_x)
 		return (NULL);
 	}
 	node = *stack_x;
-	big_node = stack_x;
+	big_node = *stack_x;
 	while (node != NULL)
 	{
 		if (node->position > big_node->position)

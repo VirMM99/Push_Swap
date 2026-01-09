@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:07:41 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 17:00:58 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:56:02 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,6 @@ void	check_array(char **num, t_list **stack_x);
 				// Declaración de funciones (LISTAS)
 
 void	ft_lstadd_front(t_list **lst, t_list *new); //Creo No Hace falta
-void	ft_lstclear(t_list **lst, void (*del)(void*)); //Creo No Hace falta
-void	ft_lstdelone(t_list *lst, void (*del)(void*)); //Creo No Hace falta
 t_list	*ft_lstlast(t_list *lst);
 int		ft_lstsize(t_list *lst); //Creo No Hace falta
 

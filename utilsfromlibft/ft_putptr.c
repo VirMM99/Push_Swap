@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 11:20:26 by vimirand          #+#    #+#             */
-/*   Updated: 2025/11/25 17:28:38 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:51:01 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	put_ptr(unsigned long n)
 {

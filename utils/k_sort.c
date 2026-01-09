@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 16:45:40 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 15:24:44 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:05:07 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	move_it_to_b(t_list **stack_a, t_list **stack_b, int number)
 {
@@ -58,7 +58,7 @@ void	k_sort(t_list **stack_a, t_list **stack_b, int number)
 	move_it_to_b(stack_a, stack_b, number);
 	while ((number - 1) >= 0)
 	{
-		rb_count = rotations_count((stack_b), (number - 1));
+		rb_count = rotations_count((*stack_b), (number - 1));
 		rrb_count = number - rb_count;
 		if (rb_count <= rrb_count)
 		{

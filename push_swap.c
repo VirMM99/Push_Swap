@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:04:16 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 17:07:12 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:21:24 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	main(int argc, char **argv)
 	i = 1;
 	stack_a = NULL;
 	stack_b = NULL;
+	printf(" llega aqui\n");
 	if (argc < 2)
 		return (0);
 	while (argv[i] != NULL)

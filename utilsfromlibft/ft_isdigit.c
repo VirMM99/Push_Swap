@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:57:40 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/30 17:23:53 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:50:27 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_isdigit(int c)
 {

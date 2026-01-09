@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 11:31:40 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 17:17:20 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:48:39 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 long	ft_atol(const char *nptr)
 {

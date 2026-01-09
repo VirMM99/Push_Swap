@@ -6,11 +6,11 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 12:33:03 by vimirand          #+#    #+#             */
-/*   Updated: 2025/11/25 17:44:08 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:51:11 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 size_t	ft_strlen(const char *s)
 {
