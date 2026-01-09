@@ -27,7 +27,7 @@ SRCS = push_swap.c \
 	k_sort.c \
 	parse.c \
 	ps_utils.c \
-	ps_utilstwo.c \
+	ps_utilstwo.c
 
 
 CC = cc

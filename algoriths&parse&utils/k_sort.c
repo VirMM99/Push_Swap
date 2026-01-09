@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 16:45:40 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/08 17:26:15 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:24:44 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	move_it_to_b(t_list **stack_a, t_list **stack_b, int number)
 	int	range;
 
 	i = 0;
-	range = get_num_for_range(number) * 7 / 5;
+	range = square_root(number) * 7 / 5;
 	while (*stack_a)
 	{
 		if ((*stack_a)->position <= i)

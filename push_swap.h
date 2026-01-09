@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:07:41 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/08 17:37:23 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:00:58 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,11 @@ int		rotations_count(t_list *stack, int max_position);
 void	k_sort(t_list **stack_a, t_list **stack_b, int number);
 void	check_if_numbers(t_list **stack_x, char **num);
 void	check_duplicates(t_list **stack_x);
+int		check_biggie_num(char *numbers);
+int		checking_atoil(char *numbers);
+void	checking_lenght_range_ofnum(char **num, t_list **stack_x);
+int		check_the_chars(char *num);
+void	check_array(char **num, t_list **stack_x);
 
 				// Declaración de funciones (LISTAS)
 

@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:26:15 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/08 17:37:02 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:34:42 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	three_num(t_list **stack_x)
 {
-	t_list *big;
+	t_list	*big;
 	
 	big = is_this_big(stack_x);
 	while (!is_this_order(stack_x))
@@ -30,7 +30,7 @@ void	three_num(t_list **stack_x)
 
 void	four_num(t_list **stack_a, t_list **stack_b)
 {
-	t_list *small;
+	t_list	*small;
 	
 	small = is_this_small(stack_a);
 	while (!is_this_order(stack_a))
@@ -49,7 +49,7 @@ void	four_num(t_list **stack_a, t_list **stack_b)
 
 void	five_num (t_list **stack_a, t_list **stack_b)
 {
-	t_list *small;
+	t_list	*small;
 
 	small = is_this_small(stack_a);
 	while (small != *stack_a)
@@ -74,7 +74,7 @@ void	five_num (t_list **stack_a, t_list **stack_b)
 
 int	square_root(int number) //funcion para sacar el num que se necesita en el rango del algo dde k-sort
 {
-	int i;
+	int	i;
 
 	if (number < 4)
 		return (1);

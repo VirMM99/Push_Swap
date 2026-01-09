@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 11:31:40 by vimirand          #+#    #+#             */
-/*   Updated: 2025/12/12 11:39:45 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:17:20 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ long	ft_atol(const char *nptr)
 			sign = sign * -1;
 		i++;
 	}
-	// while (nptr[i] == '0')
-	// 	i++;
+	while (nptr[i] == '0')
+		i++;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		n = n * 10 + (nptr[i] - '0');
@@ -39,9 +39,4 @@ long	ft_atol(const char *nptr)
 	return (n * sign);
 }
 
-// int	main(void)
-// {
-// 	printf("%i\n", INT_MAX);
-// 	printf ("%d\n", ft_atoi("0000999955"));
-// 	printf ("%d", atoi("0000999955"));
-// }
+
