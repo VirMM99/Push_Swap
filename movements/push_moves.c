@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 12:49:07 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 17:51:23 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/14 19:39:40 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 void	push_it(t_list **dest, t_list **src)
 {
-	t_list *temp;
-	
-	if (!src || !*src) // Si no tienes nada almacenado. Obvio.
-		return ; //Se pone así para que salga del programa. Es Void no devuelve nada
+	t_list	*temp;
+
+	if (!src || !*src)
+		return ;
 	temp = *src;
-	*src = (*src)->next; //se pone paréntesis al puntero para indicar que es puntero del src
+	*src = temp->next;
 	temp->next = *dest;
-	*dest = temp; // Guardamos en temp el src. Igualamos el src al second. en la second del temp mentemos el dest y ya igualamos el Dest al tmp que tiene el src original.
+	*dest = temp;
 }
 
-void	p_a(t_list **b, t_list **a) //pusheamos el TOP node de B a el top de A
+void	p_a(t_list **b, t_list **a)
 {
-	if (!b || !*b) // si no hay nada que podamos pushear de B salimos
+	if (!b || !*b)
 		return ;
-	push_it(a, b); // push_it(dest, src) dest es A y mandamos (src) desde B
+	push_it(a, b);
 	write (1, "pa\n", 3);
 }
-void	p_b(t_list **a, t_list **b) //pusheamos el TOP node de A a el top de B
+
+void	p_b(t_list **a, t_list **b)
 {
 	if (!a || !*a)
 		return ;
 	push_it(b, a);
 	write (1, "pb\n", 3);
 }
-

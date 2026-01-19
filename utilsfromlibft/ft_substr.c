@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:29:11 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 17:57:31 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/14 19:35:25 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = (char *)s;
 	i = 0;
 	if (start >= ft_strlen(s))
-		return (malloc((sizeof(char)) * 1));  //CAMBIAR POR MALLOC
+		return (malloc((sizeof(char)) * 1));
 	if (len >= ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	str = malloc((sizeof(char)) * len + 1);

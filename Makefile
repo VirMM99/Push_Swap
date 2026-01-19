@@ -8,8 +8,6 @@ SRCS = push_swap.c \
 	utilsfromlibft/ft_lstadd_front_bonus.c \
 	utilsfromlibft/ft_lstlast_bonus.c \
 	utilsfromlibft/ft_lstsize_bonus.c \
-	utilsfromlibft/ft_printf.c \
-	utilsfromlibft/ft_putchar.c \
 	utilsfromlibft/ft_putnbr.c \
 	utilsfromlibft/ft_putptr.c \
 	utilsfromlibft/ft_putstr.c \
@@ -27,23 +25,25 @@ SRCS = push_swap.c \
 	utils/ps_utils.c \
 	utils/ps_utilstwo.c
 
+OBJS = $(SRCS:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror 
-OBJS = $(SRCS:.c=.o)
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-%.o:%.c
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJS)
-	ar -rcs $(NAME) $(OBJS) 
+clean:
+	rm -f $(OBJS)
 
-clean: 
-	rm -rf $(OBJS)
 fclean: clean
-	rm -rf $(NAME)
-re: fclean $(NAME)
+	rm -f $(NAME) push_swap.a
 
-.PHONY: all clean fclean re 
+re: fclean all
+
+.PHONY: all clean fclean re

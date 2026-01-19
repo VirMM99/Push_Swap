@@ -6,37 +6,37 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 11:31:40 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 17:48:39 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/15 10:39:32 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-long	ft_atol(const char *nptr)
+long	ft_atol(const char *s)
 {
-	int		i;
+	long	res;
 	int		sign;
-	long	n;
+	int		i;
+	int		digit;
 
-	i = 0;
+	res = 0;
 	sign = 1;
-	n = 0;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
+	i = 0;
+	digit = 0;
+	while ((s[i] >= 9 && s[i] <= 13) || s[i] == ' ')
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (s[i] == '+' || s[i] == '-')
+		if (s[i++] == '-')
+			sign = -1;
+	while (s[i] >= '0' && s[i] <= '9')
 	{
-		if (nptr[i] == '-')
-			sign = sign * -1;
-		i++;
+		digit = 1;
+		res = res * 10 + (s[i++] - '0');
+		if ((sign == 1 && res > INT_MAX)
+			|| (sign == -1 && res < INT_MIN))
+			return (LONG_MAX);
 	}
-	while (nptr[i] == '0')
-		i++;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		n = n * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (n * sign);
+	if (!digit)
+		return (LONG_MAX);
+	return (res * sign);
 }
-
-

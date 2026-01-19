@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:49:33 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 17:51:08 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/14 19:44:35 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ char	**ft_split(char const *s, char c)
 // 	char **result = ft_split(s, ',');
 // 	printf("se consigue volver de split.\n");
 // 	int i = 0;
-	
 // 	while (result[i])
 // 	{
 // 		printf("%s\n", result[i]);

@@ -6,7 +6,7 @@
 /*   By: vimirand <vimirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 16:45:40 by vimirand          #+#    #+#             */
-/*   Updated: 2026/01/09 18:05:07 by vimirand         ###   ########.fr       */
+/*   Updated: 2026/01/14 19:47:36 by vimirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	move_it_to_b(t_list **stack_a, t_list **stack_b, int number)
 	range = square_root(number) * 7 / 5;
 	while (*stack_a)
 	{
-		if ((*stack_a)->position <= i)
+		if ((*stack_a)->index <= i)
 		{
 			p_b(stack_a, stack_b);
-			if (count_argv(*stack_b) > 1)
+			if (ft_lstsize(*stack_b) > 1)
 				r_b(stack_b);
 			i++;
 		}
-		else if ((*stack_a)->position <= i + range)
+		else if ((*stack_a)->index <= i + range)
 		{
 			p_b(stack_a, stack_b);
 			i++;
@@ -37,12 +37,13 @@ void	move_it_to_b(t_list **stack_a, t_list **stack_b, int number)
 			r_a(stack_a);
 	}
 }
+
 int	rotations_count(t_list *stack, int max_position)
 {
 	int	count;
 
 	count = 0;
-	while (stack != NULL && stack->position != max_position)
+	while (stack != NULL && stack->index != max_position)
 	{
 		stack = stack->next;
 		count++;
@@ -54,25 +55,25 @@ void	k_sort(t_list **stack_a, t_list **stack_b, int number)
 {
 	int	rb_count;
 	int	rrb_count;
-	
+	int	target;
+
 	move_it_to_b(stack_a, stack_b, number);
-	while ((number - 1) >= 0)
+	target = number - 1;
+	while (target >= 0)
 	{
-		rb_count = rotations_count((*stack_b), (number - 1));
-		rrb_count = number - rb_count;
+		rb_count = rotations_count(*stack_b, target);
+		rrb_count = ft_lstsize(*stack_b) - rb_count;
 		if (rb_count <= rrb_count)
 		{
-			while ((*stack_b)->position != (number - 1))
+			while ((*stack_b)->index != target)
 				r_b(stack_b);
-			p_a(stack_b, stack_a);
-			number--;
 		}
 		else
 		{
-			while ((*stack_b)->position != (number - 1))
+			while ((*stack_b)->index != target)
 				rr_b(stack_b);
-			p_a(stack_b, stack_a);
-			number--;
 		}
+		p_a(stack_b, stack_a);
+		target--;
 	}
 }
